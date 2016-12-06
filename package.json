@@ -21,9 +21,9 @@
   "author": "Tiago van den Berg",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/tiagovdberg/ng-easy/issues"
+    "url": "https://github.com/tiagovdberg/ng-easy-example/issues"
   },
-  "homepage": "https://github.com/tiagovdberg/ng-easy#readme",
+  "homepage": "https://github.com/tiagovdberg/ng-easy-example#readme",
   "devDependencies": {
     "bower": "^1.8.0",
     "gulp": "^3.9.1",
