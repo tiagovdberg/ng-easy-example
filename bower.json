@@ -1,6 +1,6 @@
 {
   "name": "ng-easy-example",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Examples for ng-easy.",
   "main": "index.html",
   "authors": [
@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "ng-easy": "^0.1.0"
+    "ng-easy": "^0.1.3"
   }
 }

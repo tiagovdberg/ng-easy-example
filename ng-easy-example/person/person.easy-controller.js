@@ -1,5 +1,5 @@
 (function() {
-	angular.module('app').easyController({
+	angular.module('ngEasyExample').easyController({
 		controllerName : 'PersonController'
 	});
 })();

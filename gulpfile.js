@@ -1,4 +1,5 @@
 var 
+	browserSync = require('browser-sync').create();
 	gulp = require('gulp'),
 	bump = require('gulp-bump'),
 	csslint = require('gulp-csslint')
@@ -42,6 +43,15 @@ gulp.task('font', function () {
 gulp.task('js', function () {
 	gulp.src(['js/*'])
 	.pipe(gulp.dest('dist/js'));
+});
+
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 });
 
 gulp.task('bump', function () {
