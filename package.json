@@ -1,0 +1,41 @@
+{
+  "name": "ng-easy-example",
+  "version": "0.0.1",
+  "description": "Examples for ng-easy.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagovdberg/ng-easy-example.git"
+  },
+  "keywords": [
+    "angular",
+    "ng",
+    "library",
+    "javascript",
+    "js",
+    "ng"
+  ],
+  "author": "Tiago van den Berg",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tiagovdberg/ng-easy/issues"
+  },
+  "homepage": "https://github.com/tiagovdberg/ng-easy#readme",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-bump": "^2.5.1",
+    "gulp-clean-css": "^2.1.0",
+    "gulp-csslint": "^1.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-jshint": "^2.0.4",
+    "gulp-tag-version": "^1.3.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "jshint": "^2.9.4",
+    "yargs": "^6.5.0"
+  }
+}

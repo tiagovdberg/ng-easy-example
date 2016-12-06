@@ -1,0 +1,86 @@
+]<!DOCTYPE html>
+<html data-ng-app="ng-easy-example" data-ng-controller="TemplateController as templateCtrl">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Language" content="pt-br" />
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/main.css" data-ng-if="templateCtrl.getStyleSheets().length == 0" />
+<link data-ng-repeat="styleSheet in templateCtrl.getStyleSheets()" rel="stylesheet" type="text/css" data-ng-href="{{styleSheet}}" />
+<title>{{templateCtrl.getTitle()}}</title>
+<style type="text/css">
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+	.x-ng-cloak {
+	display: none !important;
+}
+</style>
+</head>
+<body>
+	&nbsp;
+	<!-- Magic space. necessary for the body display the background -->
+	<p class="contentshortcut">
+		<a href="#content"> Go to content </a>
+	</p>
+	<header>
+		<section class="logo">
+			<img alt="Logo" src="image/logo.png" />
+			<h1>Processo de Faturamento Automático</h1>
+		</section>
+		<section class="controls" data-ng-if="templateCtrl.isMenuVisible()">
+		</section>
+	</header>
+	<nav class="navigation" data-ng-cloak>
+		<ol>
+			<li>
+				<a href="#/home">Home</a>
+			</li>
+			<li data-ng-repeat="breadCrumb in templateCtrl.getBreadCrumbs()">
+				<a href="{{breadCrumb.url}}" data-ng-if="!$last">
+					<span>{{breadCrumb.text}}</span>
+				</a>
+				<span data-ng-if="$last">{{breadCrumb.text}}</span>
+			</li>
+		</ol>
+	</nav>
+	<aside class="menu" data-ng-if="templateCtrl.isMenuVisible()" data-ng-cloak>
+		<h2>Menu</h2>
+		<ul>
+			<ng:repeat ng-repeat="menu in templateCtrl.getMenus()">
+				<li data-ng-if="templateCtrl.isMenuVisible(menu)">
+					<a href="" data-ng-click="templateCtrl.clickMenu(menu.locationPath);">{{menu.text}}</a>
+				</li>
+			</ng:repeat>
+		</ul>
+	</aside>
+	<div class="content">
+		<div data-ng-show="templateCtrl.isLoading()" class="loading">
+			<p>Carregando...</p>
+		</div>
+		<ng:hide ng-hide="templateCtrl.isLoading()">
+			<h2>Content</h2>
+			<h3 data-ng-cloak>{{templateCtrl.getTitle()}}</h3>
+			<div class="messages" data-ngs-has-messages="*" data-ng-cloak>
+				<h4>Messages</h4>
+				<ul>
+					<li class="{{message.type}}" data-ngs-messages="*">
+						<span>{{message.text}}</span>
+					</li>
+				</ul>
+			</div>
+			<ng:view></ng:view>
+		</ng:hide>
+	</div>
+	<!-- build:js js/lib.min.js -->
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="bower_components/ng-easy/dist/ng-easy.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:js js/ng-easy-example.js -->
+	<script type="text/javascript" src="ng-easy-example/person/person.easy-controller.js"></script>
+	<!-- endbuild -->
+	<script type="text/javascript" data-ng-src="{{script}}" data-ng-repeat="script in templateCtrl.getScripts()"></script>
+</body>
+</html>
