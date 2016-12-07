@@ -1,0 +1,19 @@
+<ng-easy:template
+	title="Person"
+>
+</ng-easy:template>
+{{data}}
+<ng-easy:alias ng-easy-alias="
+	ctrl as personsCtrl;
+	model as ctrl.getModel();
+	data as ctrl.getData()
+" />
+<ul>
+	<li data-ng-repeat="person in data">
+		{{person.name}} - {{person.age}}
+	</li>
+</ul>
+<form name="form" novalidate data-ng-submit="ctrl.savePerson(form)">
+	<input type="text"  required data-ng-model="model.nome" />
+	<input type="submit" />
+</form>

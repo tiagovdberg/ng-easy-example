@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "ng-easy": "^0.1.4"
+    "ng-easy": "^0.1.5"
   }
 }

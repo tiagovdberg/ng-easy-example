@@ -74,13 +74,13 @@
 		</ng:hide>
 	</div>
 	<!-- build:js js/lib.min.js -->
-	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
-	<script type="text/javascript" src="bower_components/ng-easy/dist/ng-easy.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="bower_components/ng-easy/dist/ng-easy.js"></script>
 	<!-- endbuild -->
-	<!-- build:js js/ng-easy-example.js -->
+	<!-- build:js js/ng-easy-example.min.js -->
 	<script type="text/javascript" src="ng-easy-example/ng-easy-example.module.js"></script>
-	<script type="text/javascript" src="ng-easy-example/person/person.easy-controller.js"></script>
+	<script type="text/javascript" src="ng-easy-example/persons/persons.ctrl.js"></script>
 	<!-- endbuild -->
 	<script type="text/javascript" data-ng-src="{{script}}" data-ng-repeat="script in templateCtrl.getScripts()"></script>
 </body>
