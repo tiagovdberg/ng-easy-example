@@ -6,7 +6,8 @@
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="css/main.css" data-ng-if="templateCtrl.getStyleSheets().length == 0" />
 <link data-ng-repeat="styleSheet in templateCtrl.getStyleSheets()" rel="stylesheet" type="text/css" data-ng-href="{{styleSheet}}" />
-<title>{{templateCtrl.getTitle()}}</title>
+<title data-ng-easy-uncloak>Loading ng-easy Example Application</title>
+<ng-easy:title />
 <style type="text/css">
         [ng\:cloak],
         [ng-cloak],
@@ -45,14 +46,12 @@
 			</li>
 		</ol>
 	</nav>
-	<aside class="menu" data-ng-if="templateCtrl.isMenuVisible()" data-ng-cloak>
+	<aside class="menu" data-ng-easy-has-menu data-ng-cloak>
 		<h2>Menu</h2>
 		<ul>
-			<ng:repeat ng-repeat="menu in templateCtrl.getMenus()">
-				<li data-ng-if="templateCtrl.isMenuVisible(menu)">
-					<a href="" data-ng-click="templateCtrl.clickMenu(menu.locationPath);">{{menu.text}}</a>
-				</li>
-			</ng:repeat>
+			<li data-ng-easy-menus>
+				<a href="" data-ng-click="templateCtrl.clickMenu(menu.path);">{{menu.text}}</a>
+			</li>
 		</ul>
 	</aside>
 	<div class="content">
