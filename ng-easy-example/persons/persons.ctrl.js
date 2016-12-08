@@ -1,7 +1,7 @@
 (function() {
 	angular.module('ngEasyExample').easyController({
-		controller : PersonsController,
-		//controllerName : 'PersonsController',
+		//controller : PersonsController,
+		controllerName : 'PersonsController',
 		initialStatus: 'getPersons',
 		status: {
 			'getPersons':{},
@@ -12,11 +12,10 @@
 		}
 	});
 
+/*
 	function PersonsController() {
 		var self = this;
 		self.init();
-
-//		self.model = self.model;
-//		self.data = self.data;
 	}
+*/
 })();

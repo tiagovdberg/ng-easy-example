@@ -1,6 +1,6 @@
 {
   "name": "ng-easy-example",
-  "version": "0.0.2",
+  "version": "0.0.3-0",
   "description": "Examples for ng-easy.",
   "main": "index.html",
   "scripts": {
