@@ -1,13 +1,18 @@
 <ng-easy:template
-	title="Person"
->
-</ng-easy:template>
+	title="Persons"
+	bread-crumbs="[{'text': 'Crumb 1', 'path': '#/crumb1'}]"
+    style-sheets="['css/blue.css']"
+/>
 {{ctrl}}
 <ng-easy:alias ng-easy-alias="
-	ctrl as personsCtrl;
-	model as ctrl.getModel();
-	data as ctrl.getData()
+	ctrl = personsCtrl;
+	model = ctrl.getModel();
+	data = ctrl.getData()
 " />
+<div data-ng-easy-is-loading="getPersonsAgain" class="loading">
+	<p>Local Loading...</p>
+</div>
+<button data-ng-click="ctrl.getPersonsAgain();">Get Persons Again</button>
 <ul>
 	<li data-ng-repeat="person in data">
 		{{person.name}} - {{person.age}}

@@ -1,0 +1,10 @@
+<ng-easy:template
+	title="Start Person"
+	bread-crumbs="[{'text': 'Crumb 2', 'path': '#/crumb2'}]"
+/>
+<ng-easy:alias ng-easy-alias="
+	ctrl = personsCtrl;
+	model = ctrl.getModel();
+	data = ctrl.getData()
+" />
+<button data-ng-click="ctrl.getPersons()">Start</button>

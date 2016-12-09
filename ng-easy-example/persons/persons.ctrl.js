@@ -5,9 +5,16 @@
 	angular.module('ngEasyExample').easyController({
 		controller : PersonsController,
 		controllerName : 'PersonsController',
-		initialStatus: 'getPersons',
+		initialStatus: 'showStart',
 		status: {
+			'showStart' :{},
 			'getPersons':{},
+			'getPersonsAgain':{
+				templateUrl: '/persons.html',
+				loading: 'getPersonsAgain',
+				serviceUrl: '/persons',
+				statusOnSuccess: 'getPersons'
+			},
 			'getPerson':{},
 			'editPerson':{},
 			'addPerson':{},

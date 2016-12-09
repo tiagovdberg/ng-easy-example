@@ -1,0 +1,11 @@
+<ng-easy:template
+	title=""
+	bread-crumbs="[{'text': 'Crumb 2', 'path': '#/crumb2'}]"
+	scripts="['ng-easy-example/persons/person.fn.js']"
+/>
+<ng-easy:alias ng-easy-alias="
+	ctrl = personsCtrl;
+	model = ctrl.getModel();
+	data = ctrl.getData()
+" />
+<button data-ng-click="ctrl.showStart()">Back to Start</button>
