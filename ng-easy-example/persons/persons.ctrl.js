@@ -5,10 +5,13 @@
 	angular.module('ngEasyExample').easyController({
 		controller : PersonsController,
 		controllerName : 'PersonsController',
+		//configureRoutes: false,
 		initialStatus: 'showStart',
 		status: {
 			'showStart' :{},
-			'getPersons':{},
+			'getPersons':{
+				//serviceMethod: 'PUT'
+			},
 			'getPersonsAgain':{
 				templateUrl: '/persons.html',
 				loading: 'getPersonsAgain',

@@ -15,44 +15,62 @@ gulp.task('default', ['build']);
 gulp.task('build', ['html', 'css', 'image', 'font', 'js']);
 
 gulp.task('html', function () {
-	gulp.src(['*.html'])
+	gulp.src(['**/*.html', '!dist/**'])
 	.pipe(useref())
 	.pipe(gulpIf(/^.*[^\.][^m][^i][^n]\.js$/, uglify()))
 	.pipe(gulpIf('*.css', cleanCss()))
-	.pipe(gulp.dest('dist'));
+	.pipe(gulp.dest('dist'))
+	.pipe(browserSync.stream());
 });
 
 gulp.task('css', function () {
-	gulp.src(['css/*.css'])
+	gulp.src(['css/*.css', '!dist/**'])
 	.pipe(csslint())	
 	.pipe(csslint.formatter())
 	.pipe(cleanCss())
-	.pipe(gulp.dest('dist/css'));
+	.pipe(gulp.dest('dist/css'))
+	.pipe(browserSync.stream());
 });
 
 gulp.task('image', function () {
-	gulp.src(['image/*.*'])
-	.pipe(gulp.dest('dist/image'));
+	gulp.src(['image/*.*', '!dist/**'])
+	.pipe(gulp.dest('dist/image'))
+	.pipe(browserSync.stream());
 });
 
 gulp.task('font', function () {
-	gulp.src(['image/*.*'])
-	.pipe(gulp.dest('dist/font'));
+	gulp.src(['font/*.*', '!dist/**'])
+	.pipe(gulp.dest('dist/font'))
+	.pipe(browserSync.stream());
 });
 
 gulp.task('js', function () {
-	gulp.src(['js/*'])
-	.pipe(gulp.dest('dist/js'));
+	gulp.src(['js/*', '!dist/**'])
+	.pipe(gulp.dest('dist/js'))
+	.pipe(browserSync.stream());
 });
 
 // Static server
-gulp.task('browser-sync', function() {
+gulp.task('serve', function() {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
 });
+
+//gulp.task('serve-dist', ['html', 'css', 'image', 'font', 'js'], function() {
+//    gulp.watch(['**/*.html', '!dist/**'], ['html']);
+//    gulp.watch(['**/*.css', '!dist/**'], ['css']);
+//    gulp.watch(['**/*.png', '!dist/**'], ['image']);
+//    gulp.watch(['**/*.woff2', '!dist/**'], ['font']);
+//    gulp.watch(['**/*.js', '!dist/**'], ['js']);
+//    browserSync.init({
+//        server: {
+//            baseDir: "./dist"
+//        }
+//    });
+//});
 
 gulp.task('bump', function () {
 	/// <summary>
