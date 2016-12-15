@@ -7,7 +7,9 @@
 		<ng-easy:title></ng-easy:title>
 		<title data-ng-easy-uncloak>Loading ng-easy Example Application</title>
 		<ng-easy:style-sheets></ng-easy:style-sheets>
+		<!-- build:css css/main.min.css ng-easy-default-style-sheet / -->
 		<link rel="stylesheet" type="text/css" href="css/main.css" ng-easy-default-style-sheet />
+		<!-- endbuild -->
 		<style type="text/css">
 			[ng\:cloak],
 			[ng-cloak],
@@ -74,11 +76,11 @@
 			</ng-easy:not-loading>
 		</div>
 		<!-- build:js js/lib.min.js -->
-		<script type="application/javascript" src="bower_components/angular/angular.js"></script>
-		<script type="application/javascript" src="bower_components/angular-route/angular-route.js"></script>
+		<script type="application/javascript" src="bower_components/angular/angular.min.js"></script>
+		<script type="application/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+		<script type="application/javascript" src="bower_components/ng-easy/dist/ng-easy.min.js"></script>
 		<!-- endbuild -->
 		<!-- build:js js/ng-easy-example.min.js -->
-		<script type="application/javascript" src="bower_components/ng-easy/dist/ng-easy.js"></script>
 		<script type="application/javascript" src="ng-easy-example/ng-easy-example.module.js"></script>
 		<script type="application/javascript" src="ng-easy-example/persons/persons.ctrl.js"></script>
 		<!-- endbuild -->

@@ -3,6 +3,9 @@
 	bread-crumbs="[{'text': 'Crumb 1', 'path': '#/crumb1'}]"
     style-sheets="['css/blue.css']"
 />
+<pre>{{ctrl.$$ngEasy.config | json}}</pre>
+
+<pre>{{ctrl.$$ngEasy.effectiveConfig | json}}</pre>
 <ng-easy:alias ng-easy-alias="
 	ctrl = personsCtrl;
 	model = ctrl.getModel();
