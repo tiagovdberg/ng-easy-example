@@ -49,14 +49,14 @@
 				</li>
 			</ol>
 		</nav>
-		<aside class="menu" data-ng-easy-has-menu data-ng-cloak>
+		<nav class="menu" data-ng-easy-has-menu data-ng-cloak>
 			<h2>Menu</h2>
 			<ul>
 				<li data-ng-easy-menus>
 					<a href="" data-ng-click="menu.go()">{{menu.text}}</a>
 				</li>
 			</ul>
-		</aside>
+		</nav>
 		<div class="content">
 			<div data-ng-easy-is-loading="global" class="loading">
 				<p>Loading...</p>
@@ -76,9 +76,9 @@
 			</ng-easy:not-loading>
 		</div>
 		<!-- build:js js/lib.min.js -->
-		<script type="application/javascript" src="bower_components/angular/angular.min.js"></script>
-		<script type="application/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
-		<script type="application/javascript" src="bower_components/ng-easy/dist/ng-easy.min.js"></script>
+		<script type="application/javascript" src="node_modules/angular/angular.min.js"></script>
+		<script type="application/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+		<script type="application/javascript" src="node_modules/ng-easy/dist/ng-easy.min.js"></script>
 		<!-- endbuild -->
 		<!-- build:js js/ng-easy-example.min.js -->
 		<script type="application/javascript" src="ng-easy-example/ng-easy-example.module.js"></script>

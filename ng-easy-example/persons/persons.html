@@ -4,8 +4,9 @@
     style-sheets="['css/blue.css']"
 />
 <pre>{{ctrl.$$ngEasy.config | json}}</pre>
-
 <pre>{{ctrl.$$ngEasy.effectiveConfig | json}}</pre>
+<pre>{{ctrl.model | json}}</pre> 
+<pre>{{ctrl.data | json}}</pre>
 <ng-easy:alias ng-easy-alias="
 	ctrl = personsCtrl;
 	model = ctrl.getModel();
